@@ -13,17 +13,29 @@ You can:
 - Download Openfire RTC Server'openfire_4.0.4_all.deb' from this repository 
 (NOTE: This application works only with Openfire Version 4.0.4!)
 ### Virtual Box Terminal:
-- $ apt-get update
-- $ apt-get upgrade
-- $ sudo apt-get install default-jre
-- ($ cd LOCATION OF openfire_4.0.4_all.deb)
-- $ sudo dpkg --install openfire_4.0.4_all.deb 
+```
+$ apt-get update
+$ apt-get upgrade
+$ sudo apt-get install default-jre
+($ cd LOCATION OF openfire_4.0.4_all.deb)
+$ sudo dpkg --install openfire_4.0.4_all.deb 
+$ sudo apt-get install apache2 apache2-doc
+```
 ### Open Virtual Box Webbrowser
 - Type 'localhost:9090' to access Openfire Administration
 - Create an Administrator (Email: admin@example.com | Name: admin | Password: admin)
 - Login with previous created Account: Username: admin | Password: admin
-Inside Openfire Administration change:
+#### Inside Openfire Administration change:
 - Server Settings -> Client Connections -> Plain Text -> STARTTLS policy: DISABLED!
 - Server Settings -> Compression Settings -> Client Compression Policy: NOT ENABLED!
 - Server Settings -> HTTP Binding -> Script Syntax: ENABLED!
-Install Openfire Websocket Plugin:
+#### Install Openfire Websocket Plugin:
+- Plugins -> Available Plugins -> Openfire WebSocket Plugin: Hit the green cross to install (If you can't find it download and upload the plugin manually: https://www.igniterealtime.org/projects/openfire/plugins.jsp)
+#### Virtual Box Terminal:
+```
+$ sudo /etc/init.d/openfire restart
+$ sudo chmod -R 777 /var/www
+$ sudo chown -R [username] /var/www
+```
+
+
