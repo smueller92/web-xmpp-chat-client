@@ -11,3 +11,5 @@ You can:
 ## Installation
 - Download and Install Oracle Virtual Box: https://www.virtualbox.org/
 - Download Openfire RTC Server'openfire_4.0.4_all.deb' from this repository (NOTE: This application works only with Openfire Version 4.0.4!)
+### Virtual Box Terminal:
+-asdf
