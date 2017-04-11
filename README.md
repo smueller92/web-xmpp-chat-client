@@ -13,7 +13,7 @@ You can:
 - Download Ubuntu Desktop: https://www.ubuntu.com/download/desktop
 - Download Openfire RTC Server'openfire_4.0.4_all.deb' from this repository <br />
 (NOTE: This application works only with Openfire Version 4.0.4!)
-- Create a new virtual Machine with the Ubuntu Desktop Image inside Virtual Box and complete the OS Setup
+- Create a new virtual Machine with the Ubuntu Desktop Image inside Virtual Box. Set your Username to 'test' and complete the OS Setup
 
 ## Virtual Box Setup
 Open Virtual Box Terminal:
@@ -34,6 +34,7 @@ $ sudo apt-get install apache2 apache2-doc
 - Server Settings -> Compression Settings -> Client Compression Policy: NOT ENABLED!
 - Server Settings -> HTTP Binding -> Script Syntax: ENABLED!
 - Users/Groups -> Create New User: Create 2 new Testusers (e.g. admin2 and admin3)
+- Group Chat -> Create New Room: Room ID: defaultroom | Room Name: defaultroom | Description: Test Room
 #### Install Openfire Websocket Plugin:
 - Plugins -> Available Plugins -> Openfire WebSocket Plugin: Hit the green cross to install<br />
 (If you can't find it download and upload the plugin manually: https://www.igniterealtime.org/projects/openfire/plugins.jsp)
@@ -48,5 +49,19 @@ $ sudo chown -R [username] /var/www
 - Copy this folder to /var/www/html or create /var/www/html/xmpp and extract files
 - Change Virtual Box Network Mode to "Host-only Adapter": <br />
 Open Virtual Box Manager and go to the Settings of your current virtual Machine. Then select the Network Tab and change 'NAT' to 'Host-only Adapter'. Now you can access your Openfire Server from any other device in your Network.
-
-
+- Note the IP-Adress of the Virtual Box (type 'ifconfig' inside Terminal)
+- Open the file 'script.js' inside /var/www/html/xmpp and change following lines:
+```
+// Servername (Can be found inside Openfire Administration -> Server Information -> Server Properties)
+var server = 'YOUR_USERNAME-virtualbox';
+// Variable containig the IP of your Virtual Box (ws stands for Websocket)
+var BOSH_SERVICE = 'ws://YOUR_VIRTUALBOX_IP:7070/ws/';
+```
+For example change it to:
+```
+var server = 'test-virtualbox';
+var BOSH_SERVICE = 'ws://192.168.2.1:7070/ws/';
+```
+### You have completed the Setup!
+### Open up the Browser on any device and enter 'VIRTUALBOX_IP/xmpp' (e.g. 192.168.2.1/xmpp)
+### Enjoy your own web-based XMPP Realtime Chatapplication
