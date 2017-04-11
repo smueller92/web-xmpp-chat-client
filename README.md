@@ -35,7 +35,8 @@ $ sudo apt-get install apache2 apache2-doc
 - Server Settings -> HTTP Binding -> Script Syntax: ENABLED!
 - Users/Groups -> Create New User: Create 2 new Testusers (e.g. admin2 and admin3)
 #### Install Openfire Websocket Plugin:
-- Plugins -> Available Plugins -> Openfire WebSocket Plugin: Hit the green cross to install (If you can't find it download and upload the plugin manually: https://www.igniterealtime.org/projects/openfire/plugins.jsp)
+- Plugins -> Available Plugins -> Openfire WebSocket Plugin: Hit the green cross to install<br />
+(If you can't find it download and upload the plugin manually: https://www.igniterealtime.org/projects/openfire/plugins.jsp)
 #### Virtual Box Terminal:
 ```
 $ sudo /etc/init.d/openfire restart
@@ -45,5 +46,7 @@ $ sudo chown -R [username] /var/www
 ## Application Project Setup
 - Download 'xmpp' folder from this repository
 - Copy this folder to /var/www/html or create /var/www/html/xmpp and extract files
-- Change Virtual Box 
+- Change Virtual Box Network Mode to "Host-only Adapter": <br />
+Open Virtual Box Manager and go to the Settings of your current virtual Machine. Then select the Network Tab and change 'NAT' to 'Host-only Adapter'. Now you can access your Openfire Server from any other device in your Network.
+
 
