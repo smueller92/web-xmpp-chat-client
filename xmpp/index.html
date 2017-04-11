@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Web-based XMPP Realtime Chat Client</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script data-require="jquery" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src='strophe.js'></script>
+    <!-- MUC Plugin is required to enter conferences-->
+    <script src='//rawgit.com/strophe/strophejs-plugins/master/muc/strophe.muc.js'></script>
+    <script src="script.js"></script>
+    <!-- Bootstrap as Css Framework -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div id='login' class="panel panel-default">
+                <div class="panel-heading">Login</div>
+                <form name='cred' class="panel-body">
+                    <div class="form-group">
+                        <label for='jid'>Username (JID):</label>
+                        <input type='text' id='jid'/>
+                    </div>
+                    <div class="form-group">
+                        <label for='pass'>Password:</label>
+                        <input type='password' id='pass'/>
+                    </div>
+                    <input type='button' class="btn btn-success" id='connect' value='connect'/><br><br>
+                    <label for='to'>Your Full ID: </label><input type='text' id='fullID'/>
+                </form>
+            </div>
+        </div>
+
+        <div id='chat' class="panel panel-default col-md-6">
+            <div class="panel-heading">Chat</div>
+            <form name='chat' class="panel-body">
+                <div class="form-group">
+                    <label for='to'>Person to interact with:</label>
+                    <input type='text' id='to'/>
+                </div>
+                <div class="form-group">
+                    <input type='button' class="btn btn-primary" id='btnSubPres' value='subscribe Person'/>
+                    <input type='button' class="btn btn-primary" id='btnGetPres' value='get Status of Person (Person has to be subscribed)'/>
+                </div>
+                <div class="form-group">
+                    <label for='msg'>Message:</label>
+                    <input type='text' id='msg'/>
+                </div>
+                <input type='button' class="btn btn-success" id='send' value='send Message'/>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div id='rooms' class="panel panel-default">
+                <div class="panel-heading">Rooms</div>
+                <form name='rooms' class="panel-body">
+                    <label for='room'>room:</label>
+                    <input type='text' id='room' value=''/>
+                    <input type='button' class="btn btn-primary" id='btnEnter' value='enter'/>
+                    <input type='button' class="btn btn-danger" id='btnExit' value='exit'/>
+                </form>
+            </div>
+        </div>
+
+        <div id='presence' class="panel panel-default col-md-6">
+            <div class="panel-heading">Contacts and Status</div>
+            <form name='presence' class="panel-body">
+                <input type='button' class="btn btn-primary" id='btnRoster' value='get your contacts/Rooms(Roster)'/>
+                <input type='button' class="btn btn-warning" id='btnAway' value='set your status away'/>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default panel-heading"><strong>History:</strong>
+        <div id='log'></div>
+    </div>
+</div>
+</body>
+
+</html>
