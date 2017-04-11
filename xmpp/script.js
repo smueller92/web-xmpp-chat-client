@@ -1,6 +1,6 @@
 
 // Servername (Can be found inside Openfire Administration)
-var server = 'test-virtualbox';
+var server = 'YOUR_USERNAME-virtualbox';
 // Variable containig the IP of your Virtual Box (ws stands for Websocket)
 var BOSH_SERVICE = 'ws://YOUR_VIRTUALBOX_IP:7070/ws/';
 // Name of the Chatroom, as created before inside the Openfire-Administration.
@@ -235,7 +235,7 @@ function rawOutput(data) {
 $(document).ready(function () {
 
     // Prefilled Login Data
-    $('#jid').get(0).value = "admin@test-virtualbox";
+    $('#jid').get(0).value = "admin@YOUR_USERNAME-virtualbox";
     $('#pass').get(0).value = "admin";
 
     // Execute Server Connection
