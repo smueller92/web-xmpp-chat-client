@@ -1,5 +1,5 @@
 # Web-based XMPP Realtime Chat Client
-This web-based Chatsystem is using the XMPP-Protocol to communicate with a Server (ORACLE Virtual Box & Openfire). 
+This web-based Chatsystem is using the XMPP-Protocol to communicate with a Server (ORACLE Virtual Box Ubuntu & Openfire). 
 Therefore the Javascript Library 'strophe.js' has been used to enable web-based Realtime-XMPP Applications.
 You can:
 - Send/Receive Text Messages
@@ -10,8 +10,11 @@ You can:
 - Enter/Exit Group Chats
 # Installation
 - Download and Install Oracle Virtual Box: https://www.virtualbox.org/
-- Download Openfire RTC Server'openfire_4.0.4_all.deb' from this repository 
+- Download Ubuntu Desktop: https://www.ubuntu.com/download/desktop
+- Download Openfire RTC Server'openfire_4.0.4_all.deb' from this repository <br />
 (NOTE: This application works only with Openfire Version 4.0.4!)
+- Create a new virtual Machine with the Ubuntu Desktop Image inside Virtual Box and complete the OS Setup
+
 ## Virtual Box Setup
 Open Virtual Box Terminal:
 ```
@@ -30,6 +33,7 @@ $ sudo apt-get install apache2 apache2-doc
 - Server Settings -> Client Connections -> Plain Text -> STARTTLS policy: DISABLED!
 - Server Settings -> Compression Settings -> Client Compression Policy: NOT ENABLED!
 - Server Settings -> HTTP Binding -> Script Syntax: ENABLED!
+- Users/Groups -> Create New User: Create 2 new Testusers (e.g. admin2 and admin3)
 #### Install Openfire Websocket Plugin:
 - Plugins -> Available Plugins -> Openfire WebSocket Plugin: Hit the green cross to install (If you can't find it download and upload the plugin manually: https://www.igniterealtime.org/projects/openfire/plugins.jsp)
 #### Virtual Box Terminal:
@@ -38,5 +42,8 @@ $ sudo /etc/init.d/openfire restart
 $ sudo chmod -R 777 /var/www
 $ sudo chown -R [username] /var/www
 ```
-
+## Application Project Setup
+- Download 'xmpp' folder from this repository
+- Copy this folder to /var/www/html or create /var/www/html/xmpp and extract files
+- Change Virtual Box 
 
