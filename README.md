@@ -12,7 +12,7 @@ The Chat Application allows you to:
 # Installation
 - Download and Install Oracle Virtual Box: https://www.virtualbox.org/
 - Download Ubuntu Desktop: https://www.ubuntu.com/download/desktop
-- Download Openfire RTC Server 'openfire_4.0.4_all.deb':  <br />
+- Download Openfire RTC Server 'openfire_4.0.4_all.deb': https://github.com/igniterealtime/Openfire/releases/tag/v4.0.4  <br />
 (NOTE: This application works only with Openfire Version 4.0.4!)
 - Create a new virtual Machine with the Ubuntu Desktop Image inside Virtual Box. Set your Username to 'test' and complete the OS Setup
 
