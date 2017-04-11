@@ -1,5 +1,5 @@
 # Web-based XMPP Realtime Chat Client
-This web-based Chatsystem is using the XMPP-Protocol to communicate with a Server (ORACLE Virtual Box Ubuntu & Openfire) and the user can access the Chat Client on any Device Browser. Therefore the Javascript Library 'strophe.js' has been used to enable web-based Realtime-XMPP Applications. <br />
+This web-based Chatsystem is using the XMPP-Protocol to communicate with a Ubuntu Server (ORACLE Virtual Box & Openfire) and the user can access the Chat Client on any Device Browser. Therefore the Javascript Library 'strophe.js' has been used to enable web-based Realtime-XMPP Applications. <br />
 An image of the Application can be found in this Github Wiki.<br />
 The Chat Application allows you to:
 - Send/Receive Text Messages
