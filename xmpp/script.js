@@ -1,5 +1,5 @@
 
-// Servername (Can be found inside Openfire Administration)
+// Servername (Can be found inside Openfire Administration -> Server Information -> Server Properties)
 var server = 'YOUR_USERNAME-virtualbox';
 // Variable containig the IP of your Virtual Box (ws stands for Websocket)
 var BOSH_SERVICE = 'ws://YOUR_VIRTUALBOX_IP:7070/ws/';
