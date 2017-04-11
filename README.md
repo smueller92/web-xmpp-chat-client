@@ -7,12 +7,12 @@ The Chat Application allows you to:
 - Change your current Status
 - Get the Status of other Users
 - Send Contact Requests
-- Lists your Contacts (Roster)
+- List your Contacts (Roster)
 - Enter/Exit Group Chats
 # Installation
 - Download and Install Oracle Virtual Box: https://www.virtualbox.org/
 - Download Ubuntu Desktop: https://www.ubuntu.com/download/desktop
-- Download Openfire RTC Server'openfire_4.0.4_all.deb' from this repository <br />
+- Download Openfire RTC Server 'openfire_4.0.4_all.deb':  <br />
 (NOTE: This application works only with Openfire Version 4.0.4!)
 - Create a new virtual Machine with the Ubuntu Desktop Image inside Virtual Box. Set your Username to 'test' and complete the OS Setup
 
